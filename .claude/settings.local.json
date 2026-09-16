@@ -32,7 +32,9 @@
       "Bash(awk '{printf \"архив: %.1f МБ\\\\n\", $5/1048576}')",
       "Bash(git init *)",
       "Bash(git remote *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m 'Initial commit: ketlerremont project setup *)",
+      "Bash(git push *)"
     ]
   }
 }

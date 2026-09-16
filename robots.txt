@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /privacy.html
 
-Sitemap: https://example.ru/sitemap.xml
+Sitemap: https://remtrenkmv.ru/sitemap.xml

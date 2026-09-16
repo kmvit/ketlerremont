@@ -1,0 +1,171 @@
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="index.html#cities">Города</a></li>
+    <li>Ремонт тренажёров {{city_in}}</li>
+  </ol>
+</nav>
+
+<section class="hero">
+  <div class="hero__bg">
+    <img src="assets/img/photos/hero.jpg" alt="" width="1635" height="962" fetchpriority="high" decoding="async">
+  </div>
+
+  <div class="container hero__inner">
+    <div>
+      <span class="eyebrow">{{city_name}} · КМВ</span>
+      <h1>Ремонт тренажёров<br><mark>{{city_in}}</mark></h1>
+      <p class="hero__lead">{{city_lead}}</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#lead" data-lead-cta>
+          <svg class="icon" aria-hidden="true"><use href="#i-wrench"></use></svg>
+          Вызвать мастера {{city_in}}
+        </a>
+        <a class="btn btn--ghost" href="tel:{{phone_raw}}">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+          {{phone_display}}
+        </a>
+      </div>
+
+      <ul class="hero__badges">
+        <li class="badge"><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg> Выезд {{city_in}} — бесплатно</li>
+        <li class="badge"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg> Гарантия 12 месяцев</li>
+        <li class="badge"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> {{work_hours}}</li>
+      </ul>
+
+      <p class="hero__cities">Районы выезда: {{city_areas}}</p>
+    </div>
+
+    {{hero_form}}
+  </div>
+</section>
+
+<section class="stats" aria-label="Компания в цифрах">
+  <div class="container">
+    <div class="stats__grid">{{stats}}</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Услуги {{city_in}}</span>
+      <h2>Что мы делаем {{city_in}}</h2>
+      <p>Работаем с домашними тренажёрами, залами фитнес-клубов, санаториев,
+         школ и учреждений {{city_gen}}.</p>
+    </div>
+    <div class="grid grid--3">{{services_cards}}</div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Неисправности</span>
+      <h2>С чем к нам обращаются</h2>
+    </div>
+    <ul class="failures reveal">{{failures_list}}</ul>
+    <div style="margin-top:40px">
+      <a class="btn btn--primary" href="#lead">Бесплатная диагностика {{city_in}}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="grid grid--2" style="align-items:start">
+      <div class="prose reveal">
+        <span class="eyebrow">Локальный опыт</span>
+        <h2>Особенности работы {{city_in}}</h2>
+        <p>{{city_local}}</p>
+        <p>
+          Заявку можно оставить круглосуточно — форма на сайте, WhatsApp или Telegram.
+          Звонки принимаем в режиме: {{work_hours}}. Для организаций {{city_gen}} доступно
+          абонентское обслуживание с фиксированными тарифами и приоритетным выездом.
+        </p>
+        <h3>Районы выезда</h3>
+        <p>{{city_areas}} и прилегающие посёлки. Выезд внутри города — бесплатно.</p>
+      </div>
+
+      <div class="reveal">
+        <div class="card">
+          <div class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-ruble"></use></svg></div>
+          <h3>Стоимость работ {{city_in}}</h3>
+          <p style="margin-bottom:16px">Цены не отличаются от базовых — наценки за город внутри КМВ нет.</p>
+          <ul class="card__list">
+            <li>Диагностика на месте — 0 ₽ при ремонте</li>
+            <li>Замена бегового полотна — от 2 500 ₽</li>
+            <li>Ремонт платы управления — от 2 500 ₽</li>
+            <li>Замена троса силового тренажёра — от 1 800 ₽</li>
+            <li>Сборка кардиотренажёра — от 1 500 ₽</li>
+            <li>ТО единицы оборудования — от 1 200 ₽</li>
+          </ul>
+          <a class="btn btn--outline btn--block" style="margin-top:24px" href="index.html#prices">
+            Полный прайс-лист
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Как мы работаем</span>
+      <h2>От заявки до гарантии</h2>
+    </div>
+    <div class="steps reveal">{{steps}}</div>
+  </div>
+</section>
+
+<section class="section section--photo" id="lead">
+  <div class="section__bg">
+    <img src="assets/img/photos/master-tools.jpg"
+         alt="" width="618" height="1100" loading="lazy" decoding="async">
+  </div>
+
+  <div class="container">
+    <div class="grid grid--2" style="align-items:start">
+      <div class="reveal">
+        <span class="eyebrow">Заявка</span>
+        <h2>Вызвать мастера {{city_in}}</h2>
+        <p class="section__lead">
+          Оставьте номер — перезвоним в течение 15 минут, уточним модель и симптомы,
+          назовём предварительную стоимость до выезда.
+        </p>
+        <div class="form__alt form__alt--onphoto" style="border-top:none;padding-top:16px">
+          <a class="chip-link" href="tel:{{phone_raw}}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> {{phone_display}}
+          </a>
+          <a class="chip-link" href="https://wa.me/{{whatsapp}}" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-chat"></use></svg> WhatsApp
+          </a>
+        </div>
+      </div>
+      {{main_form}}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Другие города</span>
+      <h2>Работаем по всему КМВ</h2>
+    </div>
+    <div class="grid grid--4">{{other_cities}}</div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Вопросы и ответы</span>
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="faq" data-accordion>{{faq}}</div>
+  </div>
+</section>

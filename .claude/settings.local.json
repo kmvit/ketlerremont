@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.retren.ru)",
+      "WebFetch(domain:pyatigorsk.servisporemontu.ru)",
+      "Read(//Users/home/.agents/skills/ui-ux-pro-max/**)",
+      "Bash(python3 scripts/search.py \"local repair service technical industrial trustworthy landing page\" --design-system -f markdown)",
+      "Bash(python3 scripts/search.py \"hero social-proof pricing service local\" --domain landing -n 6)",
+      "Bash(python3 scripts/search.py \"service repair trust industrial navy orange\" --domain color -n 5)",
+      "Bash(python3 scripts/search.py \"professional technical strong condensed\" --domain typography -n 4)",
+      "Bash(python3 build.py)",
+      "Bash(python3 -)",
+      "Bash(curl -sS -L --max-time 15 -o t1.jpg -w \"%{http_code} %{content_type} %{size_download}\\\\n\" \"https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1200\")",
+      "Bash(curl -sS -L --max-time 30 -o hero.jpg \"https://images.pexels.com/photos/4944427/pexels-photo-4944427.jpeg?auto=compress&cs=tinysrgb&w=1920\")",
+      "Bash(sips -c 1080 1920 hero.jpg --out hero.jpg)",
+      "Bash(sips -s format jpeg -s formatOptions 70 hero.jpg --out hero.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight hero.jpg)",
+      "Bash(awk '{printf \"%.0f КБ\\\\n\", $5/1024}')",
+      "Bash(python3 -c ' *)",
+      "Bash(sips -s format jpeg -s formatOptions 70 -Z 1100 master-tools.jpg --out master-tools.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight master-tools.jpg)",
+      "Bash(awk '{printf \"исходник: %.1f МБ\\\\n\", $5/1048576}')",
+      "Bash(sips -g pixelWidth -g pixelHeight hero.png)",
+      "Bash(cp hero.png /tmp/hero-src.png)",
+      "Bash(sips -s format jpeg -s formatOptions 72 -Z 1920 /tmp/hero-src.png --out photos/hero.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight photos/hero.jpg)",
+      "Bash(awk '{printf \"результат: %.0f КБ\\\\n\", $5/1024}')",
+      "Bash(sips -s format jpeg -s formatOptions 74 /tmp/hero-src.png --out photos/hero.jpg)",
+      "Bash(python3 -c \"import PIL; print\\('PIL', PIL.__version__\\)\")",
+      "Bash(cp *.html sitemap.xml robots.txt dist/)",
+      "Bash(cp -R assets dist/)",
+      "Bash(awk '{printf \"архив: %.1f МБ\\\\n\", $5/1048576}')",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git add *)"
+    ]
+  }
+}

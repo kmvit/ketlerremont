@@ -1,0 +1,379 @@
+<section class="hero">
+  <!-- Фон первого экрана — собственное фото заказчика (assets/img/hero.png,
+       сжатая копия в photos/hero.jpg). Мастер слева внизу, поэтому затемнение
+       сделано вертикальным: плотное под заголовком, разреженное к низу. -->
+  <div class="hero__bg">
+    <img src="{{root}}assets/img/photos/hero.jpg" alt="" width="1635" height="962" fetchpriority="high" decoding="async">
+  </div>
+
+  <div class="container hero__inner">
+    <div>
+      <span class="eyebrow">Кавказские Минеральные Воды</span>
+      <h1>Ремонт спортивного<br>оборудования <mark>на КМВ</mark></h1>
+      <p class="hero__lead">
+        Чиним беговые дорожки, велотренажёры, эллипсоиды и силовые станции — дома,
+        в фитнес-клубах и санаториях. Выезд мастера бесплатно, ремонт в день обращения,
+        письменная гарантия 12 месяцев.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#lead" data-lead-cta>
+          <svg class="icon" aria-hidden="true"><use href="#i-wrench"></use></svg>
+          Вызвать мастера
+        </a>
+        <a class="btn btn--ghost" href="tel:{{phone_raw}}">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+          {{phone_display}}
+        </a>
+      </div>
+
+      <!-- Плашки держим в одну строку: ниже по кадру мастер разбирает дорожку,
+           и второй ряд перекрывал бы его. Ссылки на города — в блоке «География»
+           и в подвале, здесь они не нужны. -->
+      <ul class="hero__badges">
+        <li class="badge"><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg> Выезд — 0 ₽</li>
+        <li class="badge"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg> Гарантия 12 мес.</li>
+        <li class="badge"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> Ремонт за визит</li>
+      </ul>
+    </div>
+
+    {{hero_form}}
+  </div>
+</section>
+
+<section class="stats" aria-label="Компания в цифрах">
+  <div class="container">
+    <div class="stats__grid">{{stats}}</div>
+  </div>
+</section>
+
+<section class="section" id="advantages">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Почему нас выбирают</span>
+      <h2>Сервис, за который не приходится переплачивать</h2>
+      <p>Мы работаем только со спортивным оборудованием — это не «ремонт всего подряд».
+         Отсюда точная диагностика, свой склад расходников и предсказуемые сроки.</p>
+    </div>
+    <div class="grid grid--3">{{usp_cards}}</div>
+  </div>
+</section>
+
+<section class="section section--alt" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Услуги</span>
+      <h2>Что мы делаем</h2>
+      <p>Полный цикл обслуживания: от разовой замены троса до годового контракта
+         на обслуживание парка тренажёров фитнес-клуба или санатория.</p>
+    </div>
+    <div class="grid grid--3">{{services_cards}}</div>
+  </div>
+</section>
+
+<section class="section" id="equipment">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Оборудование</span>
+      <h2>С чем работаем</h2>
+      <p>Бытовые и профессиональные тренажёры любых брендов и годов выпуска.
+         Если модель снята с производства — подберём аналог запчасти или изготовим узел.</p>
+    </div>
+    <div class="grid grid--2">{{equipment_cards}}</div>
+  </div>
+</section>
+
+<section class="section section--dark" id="failures">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Типовые неисправности</span>
+      <h2>Узнаёте свою проблему?</h2>
+      <p>Ниже — 90% обращений. Большинство из них устраняется на месте за один визит,
+         без вывоза тренажёра в мастерскую.</p>
+    </div>
+    <ul class="failures reveal">{{failures_list}}</ul>
+    <div style="margin-top:40px">
+      <a class="btn btn--primary" href="#lead">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        Получить бесплатную диагностику
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="works">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Что входит в ремонт</span>
+      <h2>Как выглядит работа мастера</h2>
+      <p>Ремонт тренажёра — это не «постучать и смазать». Три направления,
+         которые закрывают почти все обращения.</p>
+    </div>
+
+    <!-- Фотографии со стока (Pexels), подобраны по смыслу. Замените на снимки
+         своих работ — это самый быстрый способ поднять доверие к сайту. -->
+    <div class="grid grid--3">
+      <figure class="photo-card reveal">
+        <img src="{{root}}assets/img/photos/repair-board.jpg"
+             alt="Мастер проверяет мультиметром плату управления тренажёра"
+             width="619" height="1100" loading="lazy" decoding="async">
+        <figcaption>
+          <h3>Электроника</h3>
+          <p>Платы управления, инверторы, консоли, датчики скорости и пульса.
+             Ремонтируем на компонентном уровне, а не меняем блок целиком.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="photo-card reveal">
+        <img src="{{root}}assets/img/photos/repair-motor.jpg"
+             alt="Мастер в мастерской ремонтирует электродвигатель"
+             width="618" height="1100" loading="lazy" decoding="async">
+        <figcaption>
+          <h3>Приводы и двигатели</h3>
+          <p>Перемотка и замена щёток, подшипники, ремни, редукторы.
+             Сложные узлы забираем в мастерскую за свой счёт.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="photo-card reveal">
+        <img src="{{root}}assets/img/photos/equip-stack.jpg"
+             alt="Грузоблок силового тренажёра с плитками от 5 до 100 кг"
+             width="618" height="1100" loading="lazy" decoding="async">
+        <figcaption>
+          <h3>Механика</h3>
+          <p>Тросы, блоки, направляющие втулки грузоблоков, беговые полотна,
+             рамы и обивка. Расходники возим с собой.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="prices">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Прайс-лист</span>
+      <h2>Цены на ремонт тренажёров</h2>
+      <p>Стоимость работ без учёта запчастей. Итоговую смету фиксируем после диагностики
+         и не меняем в процессе ремонта.</p>
+    </div>
+
+    <div data-accordion class="reveal">{{price_groups}}</div>
+
+    <ul class="notes">{{price_notes}}</ul>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Как мы работаем</span>
+      <h2>Пять шагов от заявки до гарантии</h2>
+    </div>
+    <div class="steps reveal">{{steps}}</div>
+  </div>
+</section>
+
+<section class="section section--alt" id="clients">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Кому подходит</span>
+      <h2>Частным клиентам и организациям</h2>
+      <p>Для юридических лиц — договор, счёт, акт выполненных работ и полный пакет
+         закрывающих документов. Работаем по 44-ФЗ и 223-ФЗ.</p>
+    </div>
+    <div class="grid grid--3">{{clients_cards}}</div>
+  </div>
+</section>
+
+<section class="section section--tight" id="brands">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Бренды</span>
+      <h2>Обслуживаем любые марки</h2>
+    </div>
+    <ul class="brands reveal">{{brands}}</ul>
+  </div>
+</section>
+
+<section class="section section--alt" id="cities">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">География</span>
+      <h2>Выезжаем по всему Кавминводам</h2>
+      <p>Пять городов-курортов и прилегающие посёлки. Без наценки за расстояние
+         внутри агломерации КМВ.</p>
+    </div>
+    <div class="grid grid--3">{{city_cards}}</div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Отзывы</span>
+      <h2>Что говорят клиенты</h2>
+      <p>Реальные отзывы с указанием города и типа оборудования.</p>
+    </div>
+    <div class="grid grid--4">{{reviews}}</div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="cta-band__inner">
+        <div>
+          <h2>Тренажёр встал? Приедем сегодня</h2>
+          <p>Опишите проблему по телефону — назовём вилку цены сразу, до выезда.
+             Диагностика на месте бесплатная.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary" href="tel:{{phone_raw}}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            {{phone_display}}
+          </a>
+          <a class="btn btn--ghost" href="https://wa.me/{{whatsapp}}" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-chat"></use></svg>
+            Написать в WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="faq">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Вопросы и ответы</span>
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="faq" data-accordion>{{faq}}</div>
+  </div>
+</section>
+
+<section class="section section--photo" id="lead">
+  <!-- Фон блока заявки. Фото со стока (Pexels) — заменить на своего мастера. -->
+  <div class="section__bg">
+    <img src="{{root}}assets/img/photos/master-tools.jpg"
+         alt="" width="618" height="1100" loading="lazy" decoding="async">
+  </div>
+
+  <div class="container">
+    <div class="grid grid--2" style="align-items:start">
+      <div class="reveal">
+        <span class="eyebrow">Заявка</span>
+        <h2>Оставьте заявку — перезвоним за 15 минут</h2>
+        <p class="section__lead">
+          Достаточно имени и телефона. Мастер перезвонит, уточнит модель
+          и симптомы, назовёт предварительную стоимость и согласует время выезда.
+        </p>
+        <ul class="card__list" style="margin-top:24px">
+          <li>Ответим в рабочее время: {{work_hours}}</li>
+          <li>Предварительная цена — по телефону, до выезда</li>
+          <li>Выезд и диагностика по КМВ — бесплатно</li>
+          <li>Не навязываем лишние работы и запчасти</li>
+        </ul>
+      </div>
+      {{main_form}}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="contacts">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Контакты</span>
+      <h2>Как с нами связаться</h2>
+    </div>
+
+    <div class="contacts">
+      <div class="contact-list reveal">
+        <div class="contact-item">
+          <span class="contact-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+          <span>
+            <span class="contact-item__label">Телефон</span><br>
+            <a class="contact-item__value" href="tel:{{phone_raw}}">{{phone_display}}</a><br>
+            <a class="contact-item__value contact-item__value--sm" href="tel:{{phone2_raw}}">{{phone2_display}}</a>
+          </span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span>
+          <span>
+            <span class="contact-item__label">Почта</span><br>
+            <a class="contact-item__value contact-item__value--sm" href="mailto:{{email}}">{{email}}</a>
+          </span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
+          <span>
+            <span class="contact-item__label">Мастерская</span><br>
+            <span class="contact-item__value contact-item__value--sm">{{address}}</span>
+          </span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span>
+          <span>
+            <span class="contact-item__label">Режим работы</span><br>
+            <span class="contact-item__value contact-item__value--sm">{{work_hours}}</span>
+          </span>
+        </div>
+        <div class="form__alt" style="border-top:none;padding-top:0">
+          <a class="chip-link" href="https://wa.me/{{whatsapp}}" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-chat"></use></svg> WhatsApp
+          </a>
+          <a class="chip-link" href="https://t.me/{{telegram}}" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg> Telegram
+          </a>
+        </div>
+      </div>
+
+      <div class="map-embed reveal">
+        <!-- Замените этот блок на iframe Яндекс.Карт:
+             Конструктор карт → «Получить код» → вставьте <iframe> сюда. -->
+        <div>
+          <svg class="icon" style="width:40px;height:40px;margin:0 auto 12px;color:var(--brand)" aria-hidden="true"><use href="#i-pin"></use></svg>
+          <strong style="display:block;color:var(--text);margin-bottom:6px">{{address}}</strong>
+          Здесь будет карта проезда.<br>Вставьте код виджета Яндекс.Карт в шаблон.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="prose reveal">
+      <h2>Ремонт тренажёров на Кавминводах: что важно знать</h2>
+      <p>
+        Тренажёрный парк на КМВ работает в специфических условиях. В санаториях Ессентуков,
+        Кисловодска и Железноводска оборудование загружено круглый год и практически без пауз:
+        ресурс беговых полотен и подшипников вырабатывается в 2–3 раза быстрее, чем в домашнем
+        зале. В частных квартирах картина обратная — тренажёр месяцами стоит без движения,
+        смазка на деке высыхает, а первый же запуск даёт перегрев двигателя.
+      </p>
+      <p>
+        Поэтому мы разделяем два подхода. Для организаций — плановое техобслуживание по графику:
+        протяжка резьбовых соединений, чистка от пыли, замена смазки, центровка полотен,
+        калибровка датчиков. Такой регламент дешевле аварийного ремонта в разы и не выводит зал
+        из работы. Для частных клиентов — разовая диагностика и ремонт с рекомендациями по
+        эксплуатации, чтобы поломка не повторилась через месяц.
+      </p>
+      <h3>Чего мы не делаем</h3>
+      <ul>
+        <li>Не берёмся за ремонт, если он экономически бессмысленнее покупки нового тренажёра — скажем об этом прямо.</li>
+        <li>Не меняем узлы «на всякий случай»: заменяем только то, что действительно вышло из строя.</li>
+        <li>Не называем цену «по факту» — смета согласовывается до начала работ.</li>
+      </ul>
+      <h3>Сколько живёт тренажёр при правильном обслуживании</h3>
+      <p>
+        Профессиональная беговая дорожка при регулярном ТО отрабатывает 10–15 лет,
+        бытовая — 7–10 лет. Грузоблочные силовые станции при своевременной замене тросов
+        и втулок служат десятилетиями: чаще всего меняется только обивка. Основные враги —
+        пыль, отсутствие смазки и перегрузка оборудования сверх заявленного лимита веса
+        пользователя.
+      </p>
+    </div>
+  </div>
+</section>

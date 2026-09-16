@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{brand_name}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#0B1220">
+<meta name="format-detection" content="telephone=no">
+
+<link rel="icon" href="{{root}}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{root}}assets/img/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="{{root}}assets/css/style.css">
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script type="application/ld+json">{{jsonld}}</script>
+{{head_extra}}
+</head>
+<body>
+{{icons}}
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span class="topbar__item topbar__cities">
+      <svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>
+      Пятигорск · Ессентуки · Кисловодск · Железноводск · Минводы
+    </span>
+    <span class="topbar__item topbar__hours">
+      <svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>
+      {{work_hours}}
+    </span>
+    <a class="topbar__item topbar__mail" href="mailto:{{email}}">
+      <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+      {{email}}
+    </a>
+    <a class="topbar__item topbar__phone" href="tel:{{phone_raw}}">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+      {{phone_display}}
+    </a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="{{root}}index.html" aria-label="{{brand_name}} — на главную">
+      <svg class="logo__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0B1220"/>
+        <g fill="none" stroke="#F26419" stroke-width="4.5" stroke-linecap="round">
+          <path d="M20 24v16M44 24v16M13 29v6M51 29v6M20 32h24"/>
+        </g>
+      </svg>
+      <span class="logo__text">
+        <span class="logo__name">{{brand_name}}</span>
+        <span class="logo__sub">Ремонт спортивного оборудования</span>
+      </span>
+    </a>
+
+    <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="site-nav" aria-label="Меню">
+      <svg class="icon burger__open" aria-hidden="true"><use href="#i-menu"></use></svg>
+      <svg class="icon burger__close" aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+
+    <nav class="nav" id="site-nav" data-nav aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="{{home}}#services">Услуги</a></li>
+        <li><a class="nav__link" href="{{home}}#equipment">Оборудование</a></li>
+        <li><a class="nav__link" href="{{home}}#prices">Цены</a></li>
+        <li><a class="nav__link" href="{{home}}#process">Как работаем</a></li>
+        <li><a class="nav__link" href="{{home}}#cities">Города</a></li>
+        <li class="nav__item--compact"><a class="nav__link" href="{{home}}#faq">Вопросы</a></li>
+        <li><a class="nav__link" href="{{home}}#contacts">Контакты</a></li>
+        <li class="nav__cta"><a class="btn btn--primary btn--block" href="#lead" data-lead-cta>Вызвать мастера</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--primary btn--sm header__phone" href="tel:{{phone_raw}}">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+      {{phone_display}}
+    </a>
+  </div>
+</header>
+
+<main id="main">
+{{content}}
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <h4>{{brand_name}}</h4>
+        <p style="margin-bottom:16px">Сервис спортивного оборудования на Кавказских Минеральных Водах. Ремонт, обслуживание, сборка и перевозка тренажёров с гарантией 12 месяцев.</p>
+        <a class="btn btn--primary btn--sm" href="tel:{{phone_raw}}">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+          {{phone_display}}
+        </a>
+      </div>
+      <div>
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="{{home}}#services">Ремонт тренажёров</a></li>
+          <li><a href="{{home}}#services">Диагностика</a></li>
+          <li><a href="{{home}}#services">Техобслуживание</a></li>
+          <li><a href="{{home}}#services">Сборка и монтаж</a></li>
+          <li><a href="{{home}}#services">Разбор и перевозка</a></li>
+          <li><a href="{{home}}#prices">Прайс-лист</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>География</h4>
+        <ul>{{footer_cities}}</ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:{{phone_raw}}">{{phone_display}}</a></li>
+          <li><a href="tel:{{phone2_raw}}">{{phone2_display}}</a></li>
+          <li><a href="mailto:{{email}}">{{email}}</a></li>
+          <li>{{address}}</li>
+          <li>{{work_hours}}</li>
+          <li><a href="{{root}}privacy.html">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© {{year}} {{brand_name}}. {{legal_name}}, ИНН {{inn}}.</span>
+      <span class="footer__disclaimer">Информация на сайте носит справочный характер и не является публичной офертой (ст. 437 ГК РФ). Точная стоимость определяется после диагностики.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar" data-callbar>
+  <a href="tel:{{phone_raw}}">
+    <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+    Позвонить
+  </a>
+  <a href="https://wa.me/{{whatsapp}}" target="_blank" rel="noopener">
+    <svg class="icon" aria-hidden="true"><use href="#i-chat"></use></svg>
+    WhatsApp
+  </a>
+</div>
+
+<button class="to-top" type="button" data-to-top aria-label="Наверх">
+  <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+</button>
+
+<!-- Форма во всплывающем окне. На мобильном она заменяет карточку в первом
+     экране: та занимала весь экран и закрывала фотографию. Если JS не работает
+     или <dialog> не поддерживается, кнопки просто ведут якорем на блок «Заявка». -->
+<dialog class="modal" id="lead-modal" aria-label="Вызвать мастера">
+  <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">
+    <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+  </button>
+  {{modal_form}}
+</dialog>
+
+<script src="{{root}}assets/js/main.js" defer></script>
+{{body_extra}}
+</body>
+</html>
